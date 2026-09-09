@@ -1,0 +1,213 @@
+{"kind":"deck","id":"pr/wwgvfm","name":"Deck"}
+{"kind":"layout","layoutId":"aa30ffb2-1669-46c6-b5ec-228cd5d31a65","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"a13a9b94-2d6e-4a6d-956b-c61aa8ebd720","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/0d4ebn","slide":1,"title":"SpendWise","textShapes":5}
+{"kind":"shape","id":"sh/fapknu5s","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/gbylgz6d","slide":1,"bbox":[0,0,470,720]}
+{"kind":"textbox","id":"sh/hc72p4ny","slide":1,"text":"SpendWise","textPreview":"SpendWise","textChars":9,"textLines":1,"bbox":[70,132,350,58]}
+{"kind":"textbox","id":"sh/65w3apob","slide":1,"text":"A simple, offline expense tracker for students","textPreview":"A simple, offline expense tracker for students","textChars":46,"textLines":1,"bbox":[70,206,320,82]}
+{"kind":"textbox","id":"sh/765kju5w","slide":1,"text":"Functionality walkthrough","textPreview":"Functionality walkthrough","textChars":25,"textLines":1,"bbox":[70,540,290,24]}
+{"kind":"textbox","id":"sh/s7ylcz6h","slide":1,"text":"Created by Jis Joseph and Adhithyan Panangadan","textPreview":"Created by Jis Joseph and Adhithyan Panangadan","textChars":46,"textLines":1,"bbox":[70,575,330,42]}
+{"kind":"shape","id":"sh/ji5kfa5k","slide":1,"bbox":[950,655,205,32]}
+{"kind":"textbox","id":"sh/ba9wbm5s","slide":1,"text":"Material 3 teal theme","textPreview":"Material 3 teal theme","textChars":21,"textLines":1,"bbox":[962,663,181,18]}
+{"kind":"image","id":"im/k3ydonq1","slide":1,"name":"","geometry":"roundRect","alt":"SpendWise dashboard on mobile","bbox":[610,52,298,646]}
+{"kind":"image","id":"im/7q9cz2ps","slide":1,"name":"","geometry":"roundRect","alt":"SpendWise statistics on mobile","bbox":[938,120,234,508]}
+{"kind":"notes","id":"nt/0d4ebn","slide":1,"text":""}
+{"kind":"slide","id":"sl/knxli3","slide":2,"title":"WHAT IT IS","textShapes":19}
+{"kind":"textbox","id":"sh/18bq54va","slide":2,"text":"WHAT IT IS","textPreview":"WHAT IT IS","textChars":10,"textLines":1,"bbox":[72,46,500,22]}
+{"kind":"textbox","id":"sh/e5k7apwz","slide":2,"text":"A clear budget picture, one screen at a time","textPreview":"A clear budget picture, one screen at a time","textChars":44,"textLines":1,"bbox":[72,77,1040,52]}
+{"kind":"textbox","id":"sh/z6t83udk","slide":2,"text":"A small set of connected screens turns everyday purchases into a clear budget picture.","textPreview":"A small set of connected screens turns everyday purchases into a clear budget picture.","textChars":86,"textLines":1,"bbox":[72,138,1020,32]}
+{"kind":"textbox","id":"sh/c3ip8fet","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1162,48,46,20]}
+{"kind":"shape","id":"sh/d4rq1kve","slide":2,"bbox":[72,182,1136,2]}
+{"kind":"shape","id":"sh/q10765wn","slide":2,"bbox":[72,224,530,120]}
+{"kind":"shape","id":"sh/r29ozad8","slide":2,"bbox":[90,242,38,38]}
+{"kind":"textbox","id":"sh/4fip4fex","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[90,251,38,18]}
+{"kind":"textbox","id":"sh/5gr6xkv2","slide":2,"text":"Home","textPreview":"Home","textChars":4,"textLines":1,"bbox":[144,244,438,24]}
+{"kind":"textbox","id":"sh/lkz6dorq","slide":2,"text":"Review the monthly budget, totals, filters, and recent expenses.","textPreview":"Review the monthly budget, totals, filters, and recent expenses.","textChars":64,"textLines":1,"bbox":[144,276,438,52]}
+{"kind":"shape","id":"sh/0jqpkja5","slide":2,"bbox":[72,368,530,120]}
+{"kind":"shape","id":"sh/zyhobe9k","slide":2,"bbox":[90,386,38,38]}
+{"kind":"textbox","id":"sh/yx87i9sf","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[90,395,38,18]}
+{"kind":"textbox","id":"sh/dwz694ru","slide":2,"text":"Add","textPreview":"Add","textChars":3,"textLines":1,"bbox":[144,388,438,24]}
+{"kind":"textbox","id":"sh/cv6pgza9","slide":2,"text":"Save a title, amount, category, and date for each expense.","textPreview":"Save a title, amount, category, and date for each expense.","textChars":58,"textLines":1,"bbox":[144,420,438,52]}
+{"kind":"shape","id":"sh/buxo7u9o","slide":2,"bbox":[678,224,530,120]}
+{"kind":"shape","id":"sh/qto7e9s3","slide":2,"bbox":[696,242,38,38]}
+{"kind":"textbox","id":"sh/psf654ri","slide":2,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[696,251,38,18]}
+{"kind":"textbox","id":"sh/or65czax","slide":2,"text":"Statistics","textPreview":"Statistics","textChars":10,"textLines":1,"bbox":[750,244,438,24]}
+{"kind":"textbox","id":"sh/gbapszit","slide":2,"text":"See category, weekly, and six-month spending patterns.","textPreview":"See category, weekly, and six-month spending patterns.","textChars":54,"textLines":1,"bbox":[750,276,438,52]}
+{"kind":"shape","id":"sh/hcj6l4ze","slide":2,"bbox":[678,368,530,120]}
+{"kind":"shape","id":"sh/u9s7qp03","slide":2,"bbox":[696,386,38,38]}
+{"kind":"textbox","id":"sh/fa1ojuh8","slide":2,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[696,395,38,18]}
+{"kind":"textbox","id":"sh/s7qpofix","slide":2,"text":"Settings","textPreview":"Settings","textChars":8,"textLines":1,"bbox":[750,388,438,24]}
+{"kind":"textbox","id":"sh/t8z6hkzi","slide":2,"text":"Choose budget, currency, appearance, and local data actions.","textPreview":"Choose budget, currency, appearance, and local data actions.","textChars":60,"textLines":1,"bbox":[750,420,438,52]}
+{"kind":"shape","id":"sh/6587mp0r","slide":2,"bbox":[72,540,1136,92]}
+{"kind":"textbox","id":"sh/76hofuhc","slide":2,"text":"Simple flow","textPreview":"Simple flow","textChars":11,"textLines":1,"bbox":[96,563,140,24]}
+{"kind":"textbox","id":"sh/c3up0ji1","slide":2,"text":"Add an expense  >  dashboard updates  >  charts explain the pattern  >  information stays on the device","textPreview":"Add an expense  >  dashboard updates  >  charts explain the pattern  >  information stays on the device","textChars":103,"textLines":1,"bbox":[244,560,905,32]}
+{"kind":"textbox","id":"sh/d43qtozm","slide":2,"text":"SpendWise | App functionality walkthrough","textPreview":"SpendWise | App functionality walkthrough","textChars":41,"textLines":1,"bbox":[72,688,700,16]}
+{"kind":"notes","id":"nt/knxli3","slide":2,"text":""}
+{"kind":"slide","id":"sl/4c1t5a","slide":3,"title":"HOME","textShapes":14}
+{"kind":"textbox","id":"sh/g7ydwvu1","slide":3,"text":"HOME","textPreview":"HOME","textChars":4,"textLines":1,"bbox":[72,46,500,22]}
+{"kind":"textbox","id":"sh/v6pc3qtg","slide":3,"text":"The dashboard answers: How am I doing this month?","textPreview":"The dashboard answers: How am I doing this month?","textChars":49,"textLines":1,"bbox":[72,77,1040,52]}
+{"kind":"textbox","id":"sh/ulgbulcv","slide":3,"text":"It combines budget status, quick metrics, search, category filters, and a recent-expense list.","textPreview":"It combines budget status, quick metrics, search, category filters, and a recent-expense list.","textChars":94,"textLines":1,"bbox":[72,138,1020,32]}
+{"kind":"textbox","id":"sh/tk7u1gva","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1162,48,46,20]}
+{"kind":"shape","id":"sh/8jytsbup","slide":3,"bbox":[72,182,1136,2]}
+{"kind":"shape","id":"sh/6hwbqlcj","slide":3,"bbox":[430,220,715,120]}
+{"kind":"shape","id":"sh/lgnuxgve","slide":3,"bbox":[448,238,38,38]}
+{"kind":"textbox","id":"sh/kfetobut","slide":3,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[448,247,38,18]}
+{"kind":"textbox","id":"sh/qt0ripkb","slide":3,"text":"Budget progress","textPreview":"Budget progress","textChars":15,"textLines":1,"bbox":[502,240,623,24]}
+{"kind":"textbox","id":"sh/ru98bu1w","slide":3,"text":"Shows spent amount, budget, remaining balance, and percentage used. The bar changes color as spending gets closer to the limit.","textPreview":"Shows spent amount, budget, remaining balance, and percentage used. The bar changes color as spending gets closer to the limit.","textChars":127,"textLines":1,"bbox":[502,272,623,52]}
+{"kind":"shape","id":"sh/svi9kf2h","slide":3,"bbox":[430,360,715,120]}
+{"kind":"shape","id":"sh/dwrqdkj2","slide":3,"bbox":[448,378,38,38]}
+{"kind":"textbox","id":"sh/i5gre5kf","slide":3,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[448,387,38,18]}
+{"kind":"textbox","id":"sh/36p87a10","slide":3,"text":"At-a-glance totals","textPreview":"At-a-glance totals","textChars":18,"textLines":1,"bbox":[502,380,623,24]}
+{"kind":"textbox","id":"sh/4ri9gf2l","slide":3,"text":"Four cards summarize spending this month, transaction count, daily average, and remaining budget.","textPreview":"Four cards summarize spending this month, transaction count, daily average, and remaining budget.","textChars":97,"textLines":1,"bbox":[502,412,623,52]}
+{"kind":"shape","id":"sh/5srq9kjq","slide":3,"bbox":[430,500,715,120]}
+{"kind":"shape","id":"sh/u1gra5k3","slide":3,"bbox":[448,518,38,38]}
+{"kind":"textbox","id":"sh/v2p83a1o","slide":3,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[448,527,38,18]}
+{"kind":"textbox","id":"sh/j6lob6hg","slide":3,"text":"Find any expense","textPreview":"Find any expense","textChars":16,"textLines":1,"bbox":[502,520,623,24]}
+{"kind":"textbox","id":"sh/y5cni10v","slide":3,"text":"Search by title or category, then narrow results by category and time period: today, week, month, year, or all time.","textPreview":"Search by title or category, then narrow results by category and time period: today, week, month, year, or all time.","textChars":116,"textLines":1,"bbox":[502,552,623,52]}
+{"kind":"textbox","id":"sh/l8n6dwzm","slide":3,"text":"SpendWise | App functionality walkthrough","textPreview":"SpendWise | App functionality walkthrough","textChars":41,"textLines":1,"bbox":[72,688,700,16]}
+{"kind":"image","id":"im/y5gvml4v","slide":3,"name":"","geometry":"roundRect","alt":"Mobile SpendWise dashboard","bbox":[80,212,284,454]}
+{"kind":"notes","id":"nt/4c1t5a","slide":3,"text":""}
+{"kind":"slide","id":"sl/q8cyrk","slide":4,"title":"ADD EXPENSES","textShapes":14}
+{"kind":"textbox","id":"sh/ormlkrud","slide":4,"text":"ADD EXPENSES","textPreview":"ADD EXPENSES","textChars":12,"textLines":1,"bbox":[72,46,500,22]}
+{"kind":"textbox","id":"sh/3qt4bmts","slide":4,"text":"Every transaction is quick to record and easy to correct","textPreview":"Every transaction is quick to record and easy to correct","textChars":56,"textLines":1,"bbox":[72,77,1040,52]}
+{"kind":"textbox","id":"sh/2pk3ihc7","slide":4,"text":"The form validates the important details before saving. Existing expenses can be edited from their card.","textPreview":"The form validates the important details before saving. Existing expenses can be edited from their card.","textChars":104,"textLines":1,"bbox":[72,138,1020,32]}
+{"kind":"textbox","id":"sh/1obm9cb2","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1162,48,46,20]}
+{"kind":"shape","id":"sh/gn2lg7uh","slide":4,"bbox":[72,182,1136,2]}
+{"kind":"textbox","id":"sh/elk3excb","slide":4,"text":"What is captured","textPreview":"What is captured","textChars":16,"textLines":1,"bbox":[466,224,310,28]}
+{"kind":"shape","id":"sh/tkbm5sbq","slide":4,"bbox":[466,270,650,120]}
+{"kind":"shape","id":"sh/sj2lc7u5","slide":4,"bbox":[484,288,38,38]}
+{"kind":"textbox","id":"sh/atgfm90j","slide":4,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[484,297,38,18]}
+{"kind":"textbox","id":"sh/vupgveh4","slide":4,"text":"Title and amount","textPreview":"Title and amount","textChars":16,"textLines":1,"bbox":[538,290,558,24]}
+{"kind":"textbox","id":"sh/wvyhojip","slide":4,"text":"A meaningful label and a positive amount are required.","textPreview":"A meaningful label and a positive amount are required.","textChars":54,"textLines":1,"bbox":[538,322,558,52]}
+{"kind":"shape","id":"sh/xw7yxoza","slide":4,"bbox":[466,404,650,120]}
+{"kind":"shape","id":"sh/mpgfi90n","slide":4,"bbox":[484,422,38,38]}
+{"kind":"textbox","id":"sh/nqpgreh8","slide":4,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[484,431,38,18]}
+{"kind":"textbox","id":"sh/oryxkjit","slide":4,"text":"Category and date","textPreview":"Category and date","textChars":17,"textLines":1,"bbox":[538,424,558,24]}
+{"kind":"textbox","id":"sh/9s7ytozy","slide":4,"text":"Choose one of eight categories and set the purchase date.","textPreview":"Choose one of eight categories and set the purchase date.","textChars":57,"textLines":1,"bbox":[538,456,558,52]}
+{"kind":"shape","id":"sh/e1wfep0b","slide":4,"bbox":[466,552,650,92]}
+{"kind":"textbox","id":"sh/z25gnuhw","slide":4,"text":"Manage later","textPreview":"Manage later","textChars":12,"textLines":1,"bbox":[488,570,135,21]}
+{"kind":"textbox","id":"sh/36lcfqxo","slide":4,"text":"Tap an expense to edit it. Delete it using the action or swipe it away, with an Undo option after deletion.","textPreview":"Tap an expense to edit it. Delete it using the action or swipe it away, with an Undo option after deletion.","textChars":107,"textLines":1,"bbox":[636,565,447,44]}
+{"kind":"textbox","id":"sh/25svm5g3","slide":4,"text":"SpendWise | App functionality walkthrough","textPreview":"SpendWise | App functionality walkthrough","textChars":41,"textLines":1,"bbox":[72,688,700,16]}
+{"kind":"image","id":"im/m5kn2xgz","slide":4,"name":"","geometry":"roundRect","alt":"Add expense form","bbox":[94,215,302,428]}
+{"kind":"notes","id":"nt/q8cyrk","slide":4,"text":""}
+{"kind":"slide","id":"sl/f7hng4","slide":5,"title":"STATISTICS","textShapes":14}
+{"kind":"textbox","id":"sh/ozqh0nq9","slide":5,"text":"STATISTICS","textPreview":"STATISTICS","textChars":10,"textLines":1,"bbox":[72,46,500,22]}
+{"kind":"textbox","id":"sh/nyh07ipo","slide":5,"text":"Saved expenses become clear spending patterns","textPreview":"Saved expenses become clear spending patterns","textChars":45,"textLines":1,"bbox":[72,77,1040,52]}
+{"kind":"textbox","id":"sh/mx8zyd83","slide":5,"text":"Charts and summary metrics help a student spot their biggest costs and recent spending rhythm.","textPreview":"Charts and summary metrics help a student spot their biggest costs and recent spending rhythm.","textChars":94,"textLines":1,"bbox":[72,138,1020,32]}
+{"kind":"textbox","id":"sh/1wfi587y","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1162,48,46,20]}
+{"kind":"shape","id":"sh/0v6hw3qd","slide":5,"bbox":[72,182,1136,2]}
+{"kind":"shape","id":"sh/etozut87","slide":5,"bbox":[452,218,680,120]}
+{"kind":"shape","id":"sh/lsjihs72","slide":5,"bbox":[470,236,38,38]}
+{"kind":"textbox","id":"sh/kra1876h","slide":5,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[470,245,38,18]}
+{"kind":"textbox","id":"sh/2d0zi9sr","slide":5,"text":"Snapshot metrics","textPreview":"Snapshot metrics","textChars":16,"textLines":1,"bbox":[524,238,588,24]}
+{"kind":"textbox","id":"sh/3y9gre9c","slide":5,"text":"Highest category, highest single expense, transaction count, and average transaction amount.","textPreview":"Highest category, highest single expense, transaction count, and average transaction amount.","textChars":92,"textLines":1,"bbox":[524,270,588,52]}
+{"kind":"shape","id":"sh/oz2hkjax","slide":5,"bbox":[452,355,680,120]}
+{"kind":"shape","id":"sh/p0byt4r2","slide":5,"bbox":[470,373,38,38]}
+{"kind":"textbox","id":"sh/e90fepsf","slide":5,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[470,382,38,18]}
+{"kind":"textbox","id":"sh/fa9gnu90","slide":5,"text":"Category breakdown","textPreview":"Category breakdown","textChars":18,"textLines":1,"bbox":[524,375,588,24]}
+{"kind":"textbox","id":"sh/gbixgzal","slide":5,"text":"A current-month donut chart shows the share and value of each category.","textPreview":"A current-month donut chart shows the share and value of each category.","textChars":71,"textLines":1,"bbox":[524,407,588,52]}
+{"kind":"shape","id":"sh/1cryp4r6","slide":5,"bbox":[452,492,680,120]}
+{"kind":"shape","id":"sh/y5kzqt8z","slide":5,"bbox":[470,510,38,38]}
+{"kind":"textbox","id":"sh/z6dgzy9k","slide":5,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[470,519,38,18]}
+{"kind":"textbox","id":"sh/vyl4vmlk","slide":5,"text":"Time-based insights","textPreview":"Time-based insights","textChars":19,"textLines":1,"bbox":[524,512,588,24]}
+{"kind":"textbox","id":"sh/axcn2h4z","slide":5,"text":"Weekly bars and a six-month trend reveal when spending is happening. A short insights list adds context using the selected budget.","textPreview":"Weekly bars and a six-month trend reveal when spending is happening. A short insights list adds context using the selected budget.","textChars":130,"textLines":1,"bbox":[524,544,588,52]}
+{"kind":"textbox","id":"sh/x03mxw3q","slide":5,"text":"SpendWise | App functionality walkthrough","textPreview":"SpendWise | App functionality walkthrough","textChars":41,"textLines":1,"bbox":[72,688,700,16]}
+{"kind":"image","id":"im/q503ulgv","slide":5,"name":"","geometry":"roundRect","alt":"SpendWise category statistics","bbox":[75,211,316,455]}
+{"kind":"notes","id":"nt/f7hng4","slide":5,"text":""}
+{"kind":"slide","id":"sl/01kjfn","slide":6,"title":"SETTINGS","textShapes":14}
+{"kind":"textbox","id":"sh/k3ihsb6t","slide":6,"text":"SETTINGS","textPreview":"SETTINGS","textChars":8,"textLines":1,"bbox":[72,46,500,22]}
+{"kind":"textbox","id":"sh/j29gz65o","slide":6,"text":"Settings keep SpendWise personal","textPreview":"Settings keep SpendWise personal","textChars":32,"textLines":1,"bbox":[72,77,1040,52]}
+{"kind":"textbox","id":"sh/y10zq1o3","slide":6,"text":"These choices update the rest of the app immediately and are saved alongside local expense data.","textPreview":"These choices update the rest of the app immediately and are saved alongside local expense data.","textChars":96,"textLines":1,"bbox":[72,138,1020,32]}
+{"kind":"textbox","id":"sh/x0ryxg7i","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1162,48,46,20]}
+{"kind":"shape","id":"sh/wfihob6x","slide":6,"bbox":[72,182,1136,2]}
+{"kind":"shape","id":"sh/ad0zm1or","slide":6,"bbox":[430,218,710,120]}
+{"kind":"shape","id":"sh/hwvi90nm","slide":6,"bbox":[448,236,38,38]}
+{"kind":"textbox","id":"sh/gv2h0v61","slide":6,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[448,245,38,18]}
+{"kind":"textbox","id":"sh/e1cnedcn","slide":6,"text":"Monthly budget","textPreview":"Monthly budget","textChars":14,"textLines":1,"bbox":[502,238,618,24]}
+{"kind":"textbox","id":"sh/f2lonid8","slide":6,"text":"Set a positive budget. The Home screen uses it to calculate remaining money and progress.","textPreview":"Set a positive budget. The Home screen uses it to calculate remaining money and progress.","textChars":89,"textLines":1,"bbox":[502,270,618,52]}
+{"kind":"shape","id":"sh/g3u5gnut","slide":6,"bbox":[430,356,710,120]}
+{"kind":"shape","id":"sh/1436psve","slide":6,"bbox":[448,374,38,38]}
+{"kind":"textbox","id":"sh/6dsnatcr","slide":6,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[448,383,38,18]}
+{"kind":"textbox","id":"sh/relojydc","slide":6,"text":"Currency and theme","textPreview":"Currency and theme","textChars":18,"textLines":1,"bbox":[502,376,618,24]}
+{"kind":"textbox","id":"sh/sfu5c3ux","slide":6,"text":"Choose EUR, USD, GBP, or INR. Use system, light, or dark appearance.","textPreview":"Choose EUR, USD, GBP, or INR. Use system, light, or dark appearance.","textChars":68,"textLines":1,"bbox":[502,408,618,52]}
+{"kind":"shape","id":"sh/tg36l8v2","slide":6,"bbox":[430,494,710,120]}
+{"kind":"shape","id":"sh/q9w7mxcv","slide":6,"bbox":[448,512,38,38]}
+{"kind":"textbox","id":"sh/ba5ov2dg","slide":6,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[448,521,38,18]}
+{"kind":"textbox","id":"sh/n2xcrqpg","slide":6,"text":"Data actions","textPreview":"Data actions","textChars":12,"textLines":1,"bbox":[502,514,618,24]}
+{"kind":"textbox","id":"sh/m14bylob","slide":6,"text":"Restore the built-in sample expenses for a demo, or delete all saved expenses after a confirmation.","textPreview":"Restore the built-in sample expenses for a demo, or delete all saved expenses after a confirmation.","textChars":99,"textLines":1,"bbox":[502,546,618,52]}
+{"kind":"textbox","id":"sh/94fut07m","slide":6,"text":"SpendWise | App functionality walkthrough","textPreview":"SpendWise | App functionality walkthrough","textChars":41,"textLines":1,"bbox":[72,688,700,16]}
+{"kind":"image","id":"im/u1szytsf","slide":6,"name":"","geometry":"roundRect","alt":"SpendWise settings screen","bbox":[78,208,290,460]}
+{"kind":"notes","id":"nt/01kjfn","slide":6,"text":""}
+{"kind":"slide","id":"sl/2jluxa","slide":7,"title":"OFFLINE BY DESIGN","textShapes":20}
+{"kind":"textbox","id":"sh/mxkbup0b","slide":7,"text":"OFFLINE BY DESIGN","textPreview":"OFFLINE BY DESIGN","textChars":17,"textLines":1,"bbox":[72,46,500,22]}
+{"kind":"textbox","id":"sh/90bap4z2","slide":7,"text":"Your spending stays after closing the app","textPreview":"Your spending stays after closing the app","textChars":41,"textLines":1,"bbox":[72,77,1040,52]}
+{"kind":"textbox","id":"sh/8z2twzih","slide":7,"text":"SpendWise stores its information locally on the device or in the browser's local app storage.","textPreview":"SpendWise stores its information locally on the device or in the browser's local app storage.","textChars":93,"textLines":1,"bbox":[72,138,1020,32]}
+{"kind":"textbox","id":"sh/zu9sjuhk","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1162,48,46,20]}
+{"kind":"shape","id":"sh/yt0rqp0z","slide":7,"bbox":[72,182,1136,2]}
+{"kind":"shape","id":"sh/lwbalkzq","slide":7,"bbox":[108,238,250,208]}
+{"kind":"textbox","id":"sh/kv2tszi5","slide":7,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[140,270,46,44]}
+{"kind":"textbox","id":"sh/3qdsveh4","slide":7,"text":"Save","textPreview":"Save","textChars":4,"textLines":1,"bbox":[140,325,160,26]}
+{"kind":"textbox","id":"sh/ip4b290j","slide":7,"text":"A new or edited expense is written to local storage.","textPreview":"A new or edited expense is written to local storage.","textChars":52,"textLines":1,"bbox":[140,364,175,48]}
+{"kind":"shape","id":"sh/sf2d0zi1","slide":7,"bbox":[514,238,250,208]}
+{"kind":"textbox","id":"sh/tgbet4j6","slide":7,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[546,270,46,44]}
+{"kind":"textbox","id":"sh/6dkvy90v","slide":7,"text":"Reload","textPreview":"Reload","textChars":6,"textLines":1,"bbox":[546,325,160,26]}
+{"kind":"textbox","id":"sh/retwre1g","slide":7,"text":"When SpendWise starts, it loads the saved expense list.","textPreview":"When SpendWise starts, it loads the saved expense list.","textChars":55,"textLines":1,"bbox":[546,364,180,48]}
+{"kind":"shape","id":"sh/4bidwzip","slide":7,"bbox":[920,238,250,208]}
+{"kind":"textbox","id":"sh/5crup4ja","slide":7,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[952,270,46,44]}
+{"kind":"textbox","id":"sh/i90vup0j","slide":7,"text":"Refresh","textPreview":"Refresh","textChars":7,"textLines":1,"bbox":[952,325,160,26]}
+{"kind":"textbox","id":"sh/ja9cnu14","slide":7,"text":"Dashboard, filters, and statistics all use the same saved data.","textPreview":"Dashboard, filters, and statistics all use the same saved data.","textChars":63,"textLines":1,"bbox":[952,364,180,48]}
+{"kind":"textbox","id":"sh/wnidsfit","slide":7,"text":"Save","textPreview":"Save","textChars":4,"textLines":1,"bbox":[360,320,120,26]}
+{"kind":"textbox","id":"sh/h8rulkje","slide":7,"text":">","textPreview":">","textChars":1,"textLines":1,"bbox":[460,320,40,28]}
+{"kind":"textbox","id":"sh/x4japgb2","slide":7,"text":"Open","textPreview":"Open","textChars":4,"textLines":1,"bbox":[766,320,120,26]}
+{"kind":"textbox","id":"sh/w3atgbah","slide":7,"text":">","textPreview":">","textChars":1,"textLines":1,"bbox":[866,320,40,28]}
+{"kind":"shape","id":"sh/b21sn6tw","slide":7,"bbox":[108,505,1062,84]}
+{"kind":"textbox","id":"sh/a18be1sb","slide":7,"text":"In simple terms","textPreview":"In simple terms","textChars":15,"textLines":1,"bbox":[140,530,175,24]}
+{"kind":"textbox","id":"sh/9gzalwbq","slide":7,"text":"Closing the app does not erase the spending record, settings, or chosen theme. No account or internet connection is required.","textPreview":"Closing the app does not erase the spending record, settings, or chosen theme. No account or internet connection is required.","textChars":125,"textLines":1,"bbox":[334,527,776,36]}
+{"kind":"textbox","id":"sh/ofqtcbul","slide":7,"text":"SpendWise | App functionality walkthrough","textPreview":"SpendWise | App functionality walkthrough","textChars":41,"textLines":1,"bbox":[72,688,700,16]}
+{"kind":"notes","id":"nt/2jluxa","slide":7,"text":""}
+{"kind":"slide","id":"sl/377rbr","slide":8,"title":"MOBILE AND CHROME","textShapes":14}
+{"kind":"textbox","id":"sh/zq5obm1w","slide":8,"text":"MOBILE AND CHROME","textPreview":"MOBILE AND CHROME","textChars":17,"textLines":1,"bbox":[72,46,500,22]}
+{"kind":"textbox","id":"sh/0re54r2h","slide":8,"text":"Same functionality, responsive layout","textPreview":"Same functionality, responsive layout","textChars":37,"textLines":1,"bbox":[72,77,1040,52]}
+{"kind":"textbox","id":"sh/lsn6dwj2","slide":8,"text":"SpendWise is one Flutter app delivered to different screens, not two separate products.","textPreview":"SpendWise is one Flutter app delivered to different screens, not two separate products.","textChars":87,"textLines":1,"bbox":[72,138,1020,32]}
+{"kind":"textbox","id":"sh/mtw761kn","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1162,48,46,20]}
+{"kind":"shape","id":"sh/nu5of618","slide":8,"bbox":[72,182,1136,2]}
+{"kind":"textbox","id":"sh/ahg7alkj","slide":8,"text":"Chrome website","textPreview":"Chrome website","textChars":14,"textLines":1,"bbox":[88,580,220,23]}
+{"kind":"textbox","id":"sh/vipoj614","slide":8,"text":"Mobile app","textPreview":"Mobile app","textChars":10,"textLines":1,"bbox":[635,610,160,23]}
+{"kind":"shape","id":"sh/j29kbaho","slide":8,"bbox":[894,220,280,386]}
+{"kind":"textbox","id":"sh/i10ji50j","slide":8,"text":"What changes","textPreview":"What changes","textChars":12,"textLines":1,"bbox":[922,250,210,25]}
+{"kind":"textbox","id":"sh/5ob2dkzu","slide":8,"text":"Wider screens","textPreview":"Wider screens","textChars":13,"textLines":1,"bbox":[922,294,180,20]}
+{"kind":"textbox","id":"sh/4321kfi9","slide":8,"text":"Home and Statistics use four summary cards in one row when the content area is wider than 620 px.","textPreview":"Home and Statistics use four summary cards in one row when the content area is wider than 620 px.","textChars":97,"textLines":1,"bbox":[922,320,210,76]}
+{"kind":"textbox","id":"sh/vy9k7qhs","slide":8,"text":"Narrow screens","textPreview":"Narrow screens","textChars":14,"textLines":1,"bbox":[922,424,180,20]}
+{"kind":"textbox","id":"sh/ux0je507","slide":8,"text":"The same cards become a two-column grid for comfortable reading and touch use.","textPreview":"The same cards become a two-column grid for comfortable reading and touch use.","textChars":78,"textLines":1,"bbox":[922,450,210,60]}
+{"kind":"textbox","id":"sh/h0r290zy","slide":8,"text":"Everything else","textPreview":"Everything else","textChars":15,"textLines":1,"bbox":[922,536,180,20]}
+{"kind":"textbox","id":"sh/wzi1gvid","slide":8,"text":"Same navigation, forms, filters, charts, settings, offline storage, and dark mode.","textPreview":"Same navigation, forms, filters, charts, settings, offline storage, and dark mode.","textChars":82,"textLines":1,"bbox":[922,562,210,46]}
+{"kind":"textbox","id":"sh/fudkjuhw","slide":8,"text":"SpendWise | App functionality walkthrough","textPreview":"SpendWise | App functionality walkthrough","textChars":41,"textLines":1,"bbox":[72,688,700,16]}
+{"kind":"image","id":"im/tcbq58v2","slide":8,"name":"","geometry":"roundRect","alt":"SpendWise on a Chrome desktop browser","bbox":[74,226,476,333]}
+{"kind":"image","id":"im/sb29c3uh","slide":8,"name":"","geometry":"roundRect","alt":"SpendWise on a mobile screen","bbox":[635,215,214,380]}
+{"kind":"notes","id":"nt/377rbr","slide":8,"text":""}
+{"kind":"slide","id":"sl/3s9znz","slide":9,"title":"PLATFORM SUMMARY","textShapes":11}
+{"kind":"textbox","id":"sh/h47a1oz6","slide":9,"text":"PLATFORM SUMMARY","textPreview":"PLATFORM SUMMARY","textChars":16,"textLines":1,"bbox":[72,46,500,22]}
+{"kind":"textbox","id":"sh/uhgrqt0f","slide":9,"text":"What a student can expect on mobile and in Chrome","textPreview":"What a student can expect on mobile and in Chrome","textChars":49,"textLines":1,"bbox":[72,77,1040,52]}
+{"kind":"textbox","id":"sh/v2p8zeh0","slide":9,"text":"The app behavior is consistent; storage is local to the device or browser where it is used.","textPreview":"The app behavior is consistent; storage is local to the device or browser where it is used.","textChars":91,"textLines":1,"bbox":[72,138,1020,32]}
+{"kind":"textbox","id":"sh/8fy9ojip","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1162,48,46,20]}
+{"kind":"shape","id":"sh/tg7qxozu","slide":9,"bbox":[72,182,1136,2]}
+{"kind":"shape","id":"sh/mdwrm90j","slide":9,"bbox":[72,224,536,340]}
+{"kind":"textbox","id":"sh/7e58veh4","slide":9,"text":"Shared functionality","textPreview":"Shared functionality","textChars":20,"textLines":1,"bbox":[104,254,300,28]}
+{"kind":"textbox","id":"sh/sbi903it","slide":9,"text":"• Add, update, delete, and undo expense deletion\n• Search, category, and time filters\n• Budget progress and spending summaries\n• Category, weekly, and six-month charts\n• Currency, theme, sample data, and local data actions\n• Works offline after it has loaded","textPreview":"• Add, update, delete, and undo expense deletion | • Search, category, and time filters | • Budget progress and spending summaries | • Ca...","textChars":258,"textLines":6,"bbox":[104,307,420,190]}
+{"kind":"shape","id":"sh/dcra98ze","slide":9,"bbox":[672,224,536,340]}
+{"kind":"textbox","id":"sh/x83u18n2","slide":9,"text":"Important difference","textPreview":"Important difference","textChars":20,"textLines":1,"bbox":[704,254,300,28]}
+{"kind":"textbox","id":"sh/w7ud8nmh","slide":9,"text":"Data is not automatically shared between the phone and the Chrome website. Each installation keeps its own local expense and settings storage.","textPreview":"Data is not automatically shared between the phone and the Chrome website. Each installation keeps its own local expense and settings sto...","textChars":142,"textLines":1,"bbox":[704,307,408,82]}
+{"kind":"textbox","id":"sh/vm1czi5c","slide":9,"text":"That is intentional for an offline app: there is no sign-in or cloud sync feature in the current version.","textPreview":"That is intentional for an offline app: there is no sign-in or cloud sync feature in the current version.","textChars":105,"textLines":1,"bbox":[704,417,408,55]}
+{"kind":"shape","id":"sh/alsv6d4r","slide":9,"bbox":[72,602,1136,48]}
+{"kind":"textbox","id":"sh/9kjux8n6","slide":9,"text":"Bottom line: choose mobile for a pocket tracker or Chrome for a wider workspace; the core experience stays the same.","textPreview":"Bottom line: choose mobile for a pocket tracker or Chrome for a wider workspace; the core experience stays the same.","textChars":116,"textLines":1,"bbox":[95,616,1085,20]}
+{"kind":"textbox","id":"sh/8jad43ml","slide":9,"text":"SpendWise | App functionality walkthrough","textPreview":"SpendWise | App functionality walkthrough","textChars":41,"textLines":1,"bbox":[72,688,700,16]}
+{"kind":"notes","id":"nt/3s9znz","slide":9,"text":""}
+{"kind":"slide","id":"sl/722kea","slide":10,"title":"SpendWise makes everyday spending easier to understand","textShapes":5}
+{"kind":"textbox","id":"sh/mxkvq50b","slide":10,"text":"SpendWise makes everyday spending easier to understand","textPreview":"SpendWise makes everyday spending easier to understand","textChars":54,"textLines":1,"bbox":[96,142,850,110]}
+{"kind":"textbox","id":"sh/90bu1kz2","slide":10,"text":"Record it. Review it. Learn from it.","textPreview":"Record it. Review it. Learn from it.","textChars":36,"textLines":1,"bbox":[96,282,620,42]}
+{"kind":"shape","id":"sh/8z2dsfih","slide":10,"bbox":[96,394,900,126]}
+{"kind":"textbox","id":"sh/zutcvqh0","slide":10,"text":"The app is ready for a student to use on mobile or in Chrome, with a responsive layout and no missing core features between the two.","textPreview":"The app is ready for a student to use on mobile or in Chrome, with a responsive layout and no missing core features between the two.","textChars":132,"textLines":1,"bbox":[132,426,825,58]}
+{"kind":"textbox","id":"sh/yt0vm50f","slide":10,"text":"SpendWise | Version 1.0","textPreview":"SpendWise | Version 1.0","textChars":23,"textLines":1,"bbox":[96,641,310,22]}
+{"kind":"textbox","id":"sh/lwbux0zq","slide":10,"text":"Created by Jis Joseph and Adhithyan Panangadan","textPreview":"Created by Jis Joseph and Adhithyan Panangadan","textChars":46,"textLines":1,"bbox":[792,641,390,22]}
+{"kind":"notes","id":"nt/722kea","slide":10,"text":""}
