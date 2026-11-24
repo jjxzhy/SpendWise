@@ -29,8 +29,19 @@ class CategoryChart extends StatelessWidget {
     final total = categoryTotals.values.fold(0.0, (sum, item) => sum + item);
     final entries = categoryTotals.entries.toList();
 
-    if (entries.isEmpty || total == 0) {
-      return const SizedBox.shrink();
+    if (entries.isEmpty || total <= 0) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 24),
+        child: Center(
+          child: Text(
+            'No category spending recorded for this period.',
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+              color: Theme.of(context).colorScheme.onSurfaceVariant,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      );
     }
 
     return Column(

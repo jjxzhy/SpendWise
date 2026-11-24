@@ -2,16 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 
+import 'config/app_config.dart';
 import 'models/expense.dart';
 import 'providers/expense_provider.dart';
 import 'providers/settings_provider.dart';
+import 'repositories/expense_repository.dart';
+import 'repositories/settings_repository.dart';
 import 'screens/add_expense_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/stats_screen.dart';
+import 'utils/url_strategy.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  configureUrlStrategy();
   await Hive.initFlutter();
 
   final expenseAdapter = ExpenseAdapter();
@@ -19,17 +24,22 @@ Future<void> main() async {
     Hive.registerAdapter(expenseAdapter);
   }
 
-  final expenseBox = await Hive.openBox<Expense>('expenses');
-  final settingsBox = await Hive.openBox<dynamic>('settings');
+  final expenseBox = await Hive.openBox<Expense>(AppConfig.expensesBoxName);
+  final settingsBox = await Hive.openBox<dynamic>(AppConfig.settingsBoxName);
+
+  final ExpenseRepository expenseRepository = HiveExpenseRepository(expenseBox);
+  final SettingsRepository settingsRepository = HiveSettingsRepository(
+    settingsBox,
+  );
 
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => SettingsProvider(settingsBox)),
-        ChangeNotifierProxyProvider<SettingsProvider, ExpenseProvider>(
-          create: (context) =>
-              ExpenseProvider(expenseBox, context.read<SettingsProvider>()),
-          update: (_, _, expenseProvider) => expenseProvider!,
+        ChangeNotifierProvider(
+          create: (_) => SettingsProvider(settingsRepository),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ExpenseProvider(expenseRepository),
         ),
       ],
       child: const SpendWiseApp(),
@@ -46,7 +56,7 @@ class SpendWiseApp extends StatelessWidget {
     final themeMode = context.watch<SettingsProvider>().themeMode;
 
     return MaterialApp(
-      title: 'SpendWise',
+      title: AppConfig.appName,
       debugShowCheckedModeBanner: false,
       themeMode: themeMode,
       theme: _buildTheme(
@@ -58,7 +68,28 @@ class SpendWiseApp extends StatelessWidget {
       darkTheme: _buildTheme(
         ColorScheme.fromSeed(seedColor: seedColor, brightness: Brightness.dark),
       ),
-      home: const MainNavigation(),
+      initialRoute: '/',
+      onGenerateRoute: _onGenerateRoute,
+      onUnknownRoute: (_) => MaterialPageRoute<void>(
+        builder: (_) => const MainNavigation(initialIndex: 0),
+      ),
+    );
+  }
+
+  Route<dynamic> _onGenerateRoute(RouteSettings settings) {
+    final uri = Uri.tryParse(settings.name ?? '/');
+    final path = uri?.path ?? '/';
+
+    final initialIndex = switch (path) {
+      '/add' => 1,
+      '/stats' || '/statistics' => 2,
+      '/settings' => 3,
+      _ => 0,
+    };
+
+    return MaterialPageRoute<void>(
+      settings: settings,
+      builder: (_) => MainNavigation(initialIndex: initialIndex),
     );
   }
 
@@ -88,14 +119,22 @@ class SpendWiseApp extends StatelessWidget {
 }
 
 class MainNavigation extends StatefulWidget {
-  const MainNavigation({super.key});
+  const MainNavigation({super.key, this.initialIndex = 0});
+
+  final int initialIndex;
 
   @override
   State<MainNavigation> createState() => _MainNavigationState();
 }
 
 class _MainNavigationState extends State<MainNavigation> {
-  int _selectedIndex = 0;
+  late int _selectedIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedIndex = widget.initialIndex.clamp(0, 3);
+  }
 
   void _selectPage(int index) {
     setState(() => _selectedIndex = index);
@@ -139,7 +178,7 @@ class _MainNavigationState extends State<MainNavigation> {
             label: 'Statistics',
           ),
           NavigationDestination(
-            icon: Icon(Icons.settings_outlined),                                                                                                                                                        
+            icon: Icon(Icons.settings_outlined),
             selectedIcon: Icon(Icons.settings),
             label: 'Settings',
           ),

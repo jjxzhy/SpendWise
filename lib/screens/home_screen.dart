@@ -250,8 +250,9 @@ class _BudgetCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final percent = budget <= 0 ? 0.0 : spent / budget;
-    final remaining = budget - spent;
+    final hasBudget = budget > 0;
+    final percent = hasBudget ? spent / budget : 0.0;
+    final remaining = hasBudget ? budget - spent : 0.0;
     final progressColor = percent >= 0.9
         ? colorScheme.error
         : percent >= 0.7
@@ -296,7 +297,9 @@ class _BudgetCard extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             Text(
-              'of ${CurrencyFormatter.format(budget, currencyCode: currencyCode)} budget',
+              hasBudget
+                  ? 'of ${CurrencyFormatter.format(budget, currencyCode: currencyCode)} budget'
+                  : 'No monthly budget set (configure in Settings)',
               style: TextStyle(
                 color: colorScheme.onPrimaryContainer.withValues(alpha: 0.78),
               ),
@@ -318,16 +321,20 @@ class _BudgetCard extends StatelessWidget {
                 Expanded(
                   child: _BudgetMetric(
                     label: 'Remaining',
-                    value: CurrencyFormatter.format(
-                      remaining,
-                      currencyCode: currencyCode,
-                    ),
+                    value: hasBudget
+                        ? CurrencyFormatter.format(
+                            remaining,
+                            currencyCode: currencyCode,
+                          )
+                        : 'Not set',
                   ),
                 ),
                 Expanded(
                   child: _BudgetMetric(
                     label: 'Used',
-                    value: '${(percent * 100).toStringAsFixed(0)}%',
+                    value: hasBudget
+                        ? '${(percent * 100).toStringAsFixed(0)}%'
+                        : '0%',
                   ),
                 ),
               ],
@@ -376,7 +383,8 @@ class _SummaryGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final remaining = budget - provider.currentMonthTotal;
+    final hasBudget = budget > 0;
+    final remaining = hasBudget ? budget - provider.currentMonthTotal : 0.0;
     final cards = [
       _SummaryItem(
         icon: Icons.payments_outlined,
@@ -402,7 +410,9 @@ class _SummaryGrid extends StatelessWidget {
       _SummaryItem(
         icon: Icons.account_balance_wallet_outlined,
         label: 'Remaining',
-        value: CurrencyFormatter.format(remaining, currencyCode: currencyCode),
+        value: hasBudget
+            ? CurrencyFormatter.format(remaining, currencyCode: currencyCode)
+            : 'Not set',
       ),
     ];
 

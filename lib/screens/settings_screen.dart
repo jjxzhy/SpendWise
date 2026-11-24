@@ -14,12 +14,19 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   final _budgetController = TextEditingController();
+  bool _initialized = false;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    final budget = context.read<SettingsProvider>().monthlyBudget;
-    _budgetController.text = budget.toStringAsFixed(2);
+    if (!_initialized) {
+      _syncBudgetField(context.read<SettingsProvider>().monthlyBudget);
+      _initialized = true;
+    }
+  }
+
+  void _syncBudgetField(double budget) {
+    _budgetController.text = budget > 0 ? budget.toStringAsFixed(2) : '';
   }
 
   @override
@@ -29,12 +36,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 
   Future<void> _saveBudget() async {
-    final value = double.tryParse(
-      _budgetController.text.trim().replaceAll(',', '.'),
-    );
-    if (value == null || value <= 0) {
+    final raw = _budgetController.text.trim().replaceAll(',', '.');
+    final value = raw.isEmpty ? 0.0 : double.tryParse(raw);
+    if (value == null || value < 0) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Budget must be greater than zero')),
+        const SnackBar(
+          content: Text('Enter a valid non-negative budget amount'),
+        ),
       );
       return;
     }
@@ -44,9 +52,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
       if (!mounted) {
         return;
       }
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(const SnackBar(content: Text('Budget saved')));
+      _syncBudgetField(value);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(value > 0 ? 'Budget saved' : 'Monthly budget cleared'),
+        ),
+      );
     } catch (_) {
       if (!mounted) {
         return;
@@ -57,33 +68,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
     }
   }
 
-  Future<void> _restoreSampleData() async {
-    final confirmed = await _confirm(
-      title: 'Restore sample data?',
-      message:
-          'This restores the demo expenses by their stable IDs and replaces '
-          'edited sample rows with fresh sample values. Your own expenses stay.',
-      actionLabel: 'Restore',
-    );
-    if (!confirmed || !mounted) {
-      return;
-    }
-    await context.read<ExpenseProvider>().restoreSampleData();
-    if (!mounted) {
-      return;
-    }
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(const SnackBar(content: Text('Expense restored')));
-  }
-
   Future<void> _deleteAllExpenses() async {
     final confirmed = await _confirm(
       title: 'Delete all expenses?',
       message:
-          'This permanently removes every expense. Demo expenses will not '
-          'reappear automatically after restart.',
-      actionLabel: 'Delete all',
+          'This permanently removes every recorded expense from local storage. '
+          'Your budget, currency, and theme preferences will be kept.',
+      actionLabel: 'Delete expenses',
       destructive: true,
     );
     if (!confirmed || !mounted) {
@@ -95,7 +86,35 @@ class _SettingsScreenState extends State<SettingsScreen> {
     }
     ScaffoldMessenger.of(
       context,
-    ).showSnackBar(const SnackBar(content: Text('Data cleared')));
+    ).showSnackBar(const SnackBar(content: Text('All expenses deleted')));
+  }
+
+  Future<void> _resetAllData() async {
+    final confirmed = await _confirm(
+      title: 'Reset all data?',
+      message:
+          'This permanently wipes all expenses, your monthly budget, currency, '
+          'and theme preferences from local/browser storage and resets '
+          'SpendWise to a fresh state.',
+      actionLabel: 'Reset everything',
+      destructive: true,
+    );
+    if (!confirmed || !mounted) {
+      return;
+    }
+
+    final expenseProvider = context.read<ExpenseProvider>();
+    final settingsProvider = context.read<SettingsProvider>();
+    await expenseProvider.clearAllExpenses();
+    await settingsProvider.resetAllSettings();
+
+    if (!mounted) {
+      return;
+    }
+    _syncBudgetField(settingsProvider.monthlyBudget);
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('All data has been reset to a fresh state')),
+    );
   }
 
   Future<bool> _confirm({
@@ -138,6 +157,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Consumer<SettingsProvider>(
       builder: (context, settingsProvider, _) {
+        final colorScheme = Theme.of(context).colorScheme;
         return ListView(
           padding: const EdgeInsets.fromLTRB(20, 18, 20, 96),
           children: [
@@ -151,7 +171,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             Text(
               'Manage your budget, appearance, and local data.',
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: Theme.of(context).colorScheme.onSurfaceVariant,
+                color: colorScheme.onSurfaceVariant,
               ),
             ),
             const SizedBox(height: 18),
@@ -167,6 +187,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                     decoration: InputDecoration(
                       labelText: 'Budget',
+                      hintText: '0.00',
                       prefixText:
                           '${CurrencyFormatter.symbolFor(settingsProvider.currencyCode)} ',
                     ),
@@ -188,6 +209,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               title: 'Currency',
               icon: Icons.payments_outlined,
               child: DropdownButtonFormField<String>(
+                key: ValueKey(settingsProvider.currencyCode),
                 initialValue: settingsProvider.currencyCode,
                 decoration: const InputDecoration(labelText: 'Currency'),
                 items: CurrencyFormatter.symbols.keys
@@ -238,25 +260,29 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
             const SizedBox(height: 14),
             _SettingsCard(
-              title: 'Data actions',
+              title: 'Data management',
               icon: Icons.storage_outlined,
               child: Column(
                 children: [
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton.icon(
-                      onPressed: _restoreSampleData,
-                      icon: const Icon(Icons.restore_outlined),
-                      label: const Text('Restore sample data'),
+                      onPressed: _deleteAllExpenses,
+                      icon: const Icon(Icons.delete_sweep_outlined),
+                      label: const Text('Delete all expenses'),
                     ),
                   ),
                   const SizedBox(height: 10),
                   SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton.icon(
-                      onPressed: _deleteAllExpenses,
-                      icon: const Icon(Icons.delete_forever_outlined),
-                      label: const Text('Delete all expenses'),
+                    child: FilledButton.tonalIcon(
+                      style: FilledButton.styleFrom(
+                        backgroundColor: colorScheme.errorContainer,
+                        foregroundColor: colorScheme.onErrorContainer,
+                      ),
+                      onPressed: _resetAllData,
+                      icon: const Icon(Icons.restart_alt_outlined),
+                      label: const Text('Reset All Data'),
                     ),
                   ),
                 ],

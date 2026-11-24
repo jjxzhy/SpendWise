@@ -30,6 +30,26 @@ class Expense {
       date: date ?? this.date,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'title': title,
+      'amount': amount,
+      'category': category,
+      'date': date.toIso8601String(),
+    };
+  }
+
+  factory Expense.fromJson(Map<String, dynamic> json) {
+    return Expense(
+      id: json['id'] as String,
+      title: json['title'] as String,
+      amount: (json['amount'] as num).toDouble(),
+      category: json['category'] as String,
+      date: DateTime.parse(json['date'] as String),
+    );
+  }
 }
 
 class ExpenseAdapter extends TypeAdapter<Expense> {

@@ -463,9 +463,15 @@ class _InsightsList extends StatelessWidget {
         'Your largest expense this month was ${highestExpense.title}.',
       );
     }
-    insights.add(
-      'You have used ${budgetPercent.toStringAsFixed(0)}% of your monthly budget.',
-    );
+    if (budget > 0) {
+      insights.add(
+        'You have used ${budgetPercent.toStringAsFixed(0)}% of your monthly budget.',
+      );
+    } else {
+      insights.add(
+        'Set a monthly budget in Settings to track your budget usage.',
+      );
+    }
 
     return insights;
   }

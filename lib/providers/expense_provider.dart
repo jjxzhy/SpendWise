@@ -1,8 +1,7 @@
 import 'package:flutter/foundation.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 
 import '../models/expense.dart';
-import '../providers/settings_provider.dart';
+import '../repositories/expense_repository.dart';
 import '../utils/category_utils.dart';
 
 enum ExpensePeriod { allTime, today, thisWeek, thisMonth, thisYear }
@@ -20,15 +19,13 @@ extension ExpensePeriodLabel on ExpensePeriod {
 }
 
 class ExpenseProvider extends ChangeNotifier {
-  ExpenseProvider(this._expenseBox, this._settingsProvider) {
+  ExpenseProvider(this._repository) {
     _loadExpenses();
-    seedSampleExpensesIfNeeded();
   }
 
   static const List<String> categories = CategoryUtils.categories;
 
-  final Box<Expense> _expenseBox;
-  final SettingsProvider _settingsProvider;
+  final ExpenseRepository _repository;
   final List<Expense> _expenses = [];
 
   List<Expense> get expenses {
@@ -78,7 +75,7 @@ class ExpenseProvider extends ChangeNotifier {
 
   double get currentMonthDailyAverage {
     final day = DateTime.now().day;
-    if (day == 0) {
+    if (day <= 0) {
       return 0;
     }
     return currentMonthTotal / day;
@@ -193,7 +190,7 @@ class ExpenseProvider extends ChangeNotifier {
   }
 
   Future<void> addExpense(Expense expense) async {
-    await _expenseBox.put(expense.id, expense);
+    await _repository.save(expense);
     _expenses.removeWhere((item) => item.id == expense.id);
     _expenses.add(expense);
     _sortExpenses();
@@ -201,7 +198,7 @@ class ExpenseProvider extends ChangeNotifier {
   }
 
   Future<void> updateExpense(Expense expense) async {
-    await _expenseBox.put(expense.id, expense);
+    await _repository.save(expense);
     final index = _expenses.indexWhere((item) => item.id == expense.id);
     if (index == -1) {
       _expenses.add(expense);
@@ -213,13 +210,13 @@ class ExpenseProvider extends ChangeNotifier {
   }
 
   Future<void> deleteExpense(String id) async {
-    await _expenseBox.delete(id);
+    await _repository.delete(id);
     _expenses.removeWhere((expense) => expense.id == id);
     notifyListeners();
   }
 
   Future<void> restoreExpense(Expense expense) async {
-    await _expenseBox.put(expense.id, expense);
+    await _repository.save(expense);
     _expenses.removeWhere((item) => item.id == expense.id);
     _expenses.add(expense);
     _sortExpenses();
@@ -227,42 +224,15 @@ class ExpenseProvider extends ChangeNotifier {
   }
 
   Future<void> clearAllExpenses() async {
-    await _expenseBox.clear();
+    await _repository.clear();
     _expenses.clear();
-    notifyListeners();
-  }
-
-  Future<void> seedSampleExpensesIfNeeded() async {
-    if (_settingsProvider.sampleDataSeeded || _expenseBox.isNotEmpty) {
-      if (!_settingsProvider.sampleDataSeeded && _expenseBox.isNotEmpty) {
-        await _settingsProvider.markSampleDataSeeded();
-      }
-      return;
-    }
-
-    for (final expense in _sampleExpenses()) {
-      await _expenseBox.put(expense.id, expense);
-    }
-    await _settingsProvider.markSampleDataSeeded();
-    _loadExpenses();
-    notifyListeners();
-  }
-
-  Future<void> restoreSampleData() async {
-    for (final expense in _sampleExpenses()) {
-      await _expenseBox.put(expense.id, expense);
-      _expenses.removeWhere((item) => item.id == expense.id);
-      _expenses.add(expense);
-    }
-    await _settingsProvider.markSampleDataSeeded();
-    _sortExpenses();
     notifyListeners();
   }
 
   void _loadExpenses() {
     _expenses
       ..clear()
-      ..addAll(_expenseBox.values);
+      ..addAll(_repository.getAll());
     _sortExpenses();
   }
 
@@ -305,103 +275,5 @@ class ExpenseProvider extends ChangeNotifier {
         date.year == now.year && date.month == now.month,
       ExpensePeriod.thisYear => date.year == now.year,
     };
-  }
-
-  List<Expense> _sampleExpenses() {
-    final now = DateTime.now();
-    DateTime daysAgo(int days) {
-      return DateTime(
-        now.year,
-        now.month,
-        now.day,
-      ).subtract(Duration(days: days));
-    }
-
-    return [
-      Expense(
-        id: 'sample-rewe-groceries',
-        title: 'REWE Groceries',
-        amount: 34.80,
-        category: 'Food',
-        date: daysAgo(0),
-      ),
-      Expense(
-        id: 'sample-bvg-monthly-ticket',
-        title: 'BVG Monthly Ticket',
-        amount: 49.00,
-        category: 'Transport',
-        date: daysAgo(1),
-      ),
-      Expense(
-        id: 'sample-coffee',
-        title: 'Coffee',
-        amount: 4.20,
-        category: 'Food',
-        date: daysAgo(2),
-      ),
-      Expense(
-        id: 'sample-spotify-premium',
-        title: 'Spotify Premium',
-        amount: 10.99,
-        category: 'Entertainment',
-        date: daysAgo(3),
-      ),
-      Expense(
-        id: 'sample-university-printing',
-        title: 'University Printing',
-        amount: 7.50,
-        category: 'University',
-        date: daysAgo(4),
-      ),
-      Expense(
-        id: 'sample-electricity-bill',
-        title: 'Electricity Bill',
-        amount: 38.40,
-        category: 'Bills',
-        date: daysAgo(5),
-      ),
-      Expense(
-        id: 'sample-football-shoes',
-        title: 'Football Shoes',
-        amount: 64.99,
-        category: 'Shopping',
-        date: daysAgo(7),
-      ),
-      Expense(
-        id: 'sample-monthly-rent',
-        title: 'Monthly Rent',
-        amount: 520.00,
-        category: 'Rent',
-        date: daysAgo(10),
-      ),
-      Expense(
-        id: 'sample-lunch-with-friends',
-        title: 'Lunch with Friends',
-        amount: 18.60,
-        category: 'Food',
-        date: daysAgo(12),
-      ),
-      Expense(
-        id: 'sample-phone-recharge',
-        title: 'Phone Recharge',
-        amount: 14.99,
-        category: 'Bills',
-        date: daysAgo(15),
-      ),
-      Expense(
-        id: 'sample-cinema-ticket',
-        title: 'Cinema Ticket',
-        amount: 13.50,
-        category: 'Entertainment',
-        date: daysAgo(20),
-      ),
-      Expense(
-        id: 'sample-train-trip',
-        title: 'Train Trip',
-        amount: 29.90,
-        category: 'Transport',
-        date: daysAgo(35),
-      ),
-    ];
   }
 }
