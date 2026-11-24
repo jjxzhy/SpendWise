@@ -1,0 +1,32 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Build and tool caches
+.dart_tool/
+build/
+coverage/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Native platform directories not required for web build
+android/
+ios/
+macos/
+linux/
+windows/
+
+# IDE & OS artifacts
+.vscode/
+.idea/
+*.iml
+.DS_Store
+*.log
+
+# Tests, docs, and non-app outputs
+test/
+outputs/
+README.md
+Dockerfile
+.dockerignore
